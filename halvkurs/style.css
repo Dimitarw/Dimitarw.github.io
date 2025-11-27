@@ -7,5 +7,68 @@ margin: 0%;
 
 }
 
+nav{
 
-*{box-sizing: border-box;}
+border: 1px solid black;
+display: grid;
+gap: 10px;
+grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+img{
+
+width: 100%;
+height: 100%;
+box-sizing: border-box;
+object-fit: cover;
+display: block;
+}
+
+
+.imgbox {
+
+    border: 1px solid black;
+
+    aspect-ratio: 1/1;
+   
+
+
+}
+
+nav a{
+text-decoration: none;
+color: black;
+
+
+}
+
+
+@media(min-width:600px){
+    .indexMain{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 25px;px;/* aldrig % på gap */
+        padding: 25px;  /*  både % och px är ok här */
+       
+
+    }
+
+    nav{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        place-items: center;
+    }
+
+
+
+}
+
+html{
+
+
+    scroll-behavior: smooth;
+}
+
+
+
