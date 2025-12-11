@@ -44,11 +44,11 @@ color: black;
 }
 
 
-@media(min-width:600px){
+@media(min-width:550px){
     .indexMain{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 25px;px;/* aldrig % på gap */
+        gap: 25px;/* aldrig % på gap */
         padding: 25px;  /*  både % och px är ok här */
        
 
@@ -71,4 +71,8 @@ html{
 }
 
 
-
+.hero {
+    padding: 40px;
+    text-align: center;
+    background: white; /* enkel bakgrundsfärg */
+}
