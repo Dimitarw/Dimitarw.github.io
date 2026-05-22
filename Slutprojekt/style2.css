@@ -1,0 +1,64 @@
+/* RESET / BASE */
+body { /* hela sidan */
+  margin: 0; /* tar bort mellanrum runt sidan */
+  background: #000; /* svart bakgrund */
+  color: #00eaff; /* textfärg (ljusblå) */
+  font-family: Arial, sans-serif; /* typsnitt */
+}
+
+html { /* hela sidan */
+  scroll-behavior: smooth; /* mjuk scroll */
+}
+
+/* HEADER */
+.header { /* header högst upp */
+  text-align: center; /* centrerar text */
+  padding: 30px 15px; /* luft inuti header */
+  border-bottom: 1px solid #00eaff; /* linje under header */
+}
+
+.header h2 { /* rubrik i header */
+  margin: 0; /* tar bort extra mellanrum */
+  font-size: 2.8rem; /* stor text */
+  text-shadow: 0 0 10px #00eaff; /* glow effekt */
+}
+
+.header h2:hover { /* när man hovrar rubrik */
+  text-shadow: 0 0 20px #00eaff; /* starkare glow */
+}
+
+/* MAIN TEXT */
+.page { /* innehållsbox */
+  max-width: 800px; /* max bredd på text */
+  margin: 0 auto; /* centrerar sidan */
+  padding: 30px 20px; /* luft runt text */
+}
+
+.meta { /* textstycke */
+  font-size: 1.1rem; /* lite större text */
+  line-height: 1.7; /* bättre radavstånd */
+  color: #bff6ff; /* ljusare blå text */
+}
+
+/* FOOTER */
+.footer { /* botten av sidan */
+  text-align: center; /* centrerar innehåll */
+  padding: 25px; /* luft inuti footer */
+  border-top: 1px solid #00eaff; /* linje ovanför */
+  margin-top: 40px; /* avstånd uppåt */
+}
+
+.footer a { /* länkar i footer */
+  color: #00eaff; /* länkfärg */
+  text-decoration: none; /* tar bort underline */
+  font-size: 14px; /* mindre text */
+  padding: 6px 10px; /* gör knappliknande känsla */
+  border: 1px solid #00eaff; /* ram runt länk */
+  border-radius: 4px; /* rundade hörn */
+  transition: 0.2s ease; /* mjuk animation */
+}
+
+.footer a:hover { /* när man hovrar länk */
+  background: #00eaff; /* blå bakgrund */
+  color: #000; /* svart text */
+}

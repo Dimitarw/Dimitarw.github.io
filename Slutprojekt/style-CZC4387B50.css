@@ -1,0 +1,147 @@
+/* RESET / BASE */
+body {
+  margin: 0; /* tar bort standard mellanrum */
+  background: #000; /* svart bakgrund */
+  color: #00eaff; /* ljusblå text */
+  font-family: Arial, sans-serif; /* typsnitt */
+}
+
+html {
+  scroll-behavior: smooth; /* mjuk scroll */
+}
+
+/* HEADER */
+.header {
+  color: #00eaff; /* textfärg */
+  text-shadow: 0 0 10px #00eaff; /* glow effekt */
+  text-align: center; /* centrerar text */
+  padding: 20px; /* mellanrum inuti */
+  background: #000; /* svart bakgrund */
+}
+
+/* JAPAN TEXT */
+.header h2 {
+  font-size: 3rem; /* stor rubrik */
+  text-shadow: 
+    0 0 5px #00eaff, /* svag glow */
+    0 0 10px #00eaff, /* lite starkare */
+    0 0 20px #00eaff, /* ännu starkare */
+    0 0 40px #00eaff; /* stark glow */
+}      
+
+/* hover glow */
+.header h2:hover {
+  text-shadow: 
+    0 0 10px #00eaff, /* glow ökar */
+    0 0 20px #00eaff,
+    0 0 40px #00eaff,
+    0 0 80px #00eaff; /* extra stark vid hover */
+}
+
+/* HEADER LINKS */
+.header a {
+  text-decoration: none; /* tar bort understrykning */
+  color: inherit; /* samma färg som text */
+}
+
+/* NAV */
+.nav {
+  display: flex; /* gör till flexbox */
+  justify-content: space-between; /* sprider ut innehåll */
+  padding: 0 20%; /* mellanrum på sidor */
+}
+
+/* BUTTONS */
+.btn {
+  padding: 6px 10px; /* inre mellanrum */
+  font-size: 13px; /* liten text */
+  color: #00eaff; /* färg */
+  text-decoration: none; /* ingen understrykning */
+  border: 1px solid #00eaff; /* ram */
+  border-radius: 6px; /* rundade hörn */
+}
+
+.btn:hover {
+  text-shadow: 0 0 10px #00eaff; /* glow vid hover */
+}
+
+/* MAIN GRID */
+main {
+  display: grid; /* grid layout */
+  gap: 10px; /* mellanrum mellan kort */
+  padding: 20px; /* inre mellanrum */
+  border-top: 2px solid #00eaff; /* linje uppe */
+  border-bottom: 2px solid #00eaff; /* linje nere */
+}
+
+@media (min-width: 700px) {
+  main {
+    grid-template-columns: repeat(2, 1fr); /* 3 kolumner på större skärm */
+  }
+}
+
+
+/* CARD */
+.card {
+  position: relative; /* behövs för absolut position */
+  background: #0a0a0a; /* mörk bakgrund */
+  border: 1px solid #00eaff; /* ram */
+  border-radius: 8px; /* rundade hörn */
+  overflow: hidden; /* gömmer det som sticker ut */
+}
+
+/* IMAGE BOX */
+.imgbox {
+  aspect-ratio: 1/1; /* gör kvadrat */
+  overflow: hidden; /* gömmer överflöd */
+}
+
+/* IMAGE */
+.imgbox img {
+  width: 100%; /* fyller bredd */
+  height: 100%; /* fyller höjd */
+  object-fit: cover; /* beskär bilden snyggt */            
+  transition: transform 0.5s ease; /* mjuk zoom */
+  pointer-events: none; /* klick går igenom bilden */
+}
+
+/* HOVER EFFECT (på hela kortet) */
+.card:hover img {
+  transform: scale(1.1); /* zoomar in bilden */
+}
+
+/* LINK BUTTON */
+.card-link {                 
+  position: absolute; /* ligger ovanpå bilden */
+  bottom: 10px; /* avstånd från botten */
+  left: 10px; /* avstånd från vänster */
+  z-index: 2; /* ligger över */
+  background: rgba(0,0,0,0.6); /* mörk genomskinlig bakgrund */
+  color: #00eaff; /* textfärg */
+  padding: 5px 8px; /* mellanrum */
+  border-radius: 4px; /* rundade hörn */
+  text-decoration: none; /* ingen understrykning */
+  font-size: 14px; /* textstorlek */
+  border: 1px solid #00eaff; /* ram */
+}
+
+.card-link:hover {
+  text-shadow: 0 0 10px #00eaff; /* glow */                 
+  background: rgba(0,0,0,0.8); /* mörkare bakgrund */
+}
+
+/* FOOTER */
+.footer {
+  text-align: center; /* centrerar */
+  padding: 20px; /* mellanrum */
+}
+
+.footer a {
+  margin: 0 10px; /* avstånd mellan länkar */
+  color: #00eaff; /* färg */
+  text-decoration: none; /* ingen understrykning */
+}
+
+.footer a:hover {
+  text-shadow: 0 0 10px #00eaff; /* glow vid hover */
+}

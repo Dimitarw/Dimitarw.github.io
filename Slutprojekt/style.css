@@ -1,0 +1,142 @@
+/* ===== RESET / BASE ===== */
+body { /* hela sidan */
+  margin: 0; /* tar bort mellanrum runt sidan */
+  background: #000; /* svart bakgrund */
+  color: #00eaff; /* textfärg (ljusblå) */
+  font-family: Arial, sans-serif; /* typsnitt */
+}
+
+html { /* hela html-dokumentet */
+  scroll-behavior: smooth; /* gör scroll mjuk */
+}
+
+/* ===== HEADER ===== */
+.header { /* toppen av sidan */
+  color: #00eaff; /* textfärg */
+  text-shadow: 0 0 10px #00eaff; /* glow effekt */
+  text-align: center; /* centrerar text */
+  padding: 20px; /* luft inuti header */
+  background: #000; /* svart bakgrund */
+}
+
+.header h2 { /* rubrik i header */
+  font-size: 3rem; /* stor text */
+  text-shadow: /* glow runt text */
+    0 0 5px #00eaff, /* svag glow */
+    0 0 10px #00eaff, /* lite starkare */
+    0 0 20px #00eaff, /* ännu starkare */
+    0 0 40px #00eaff; /* stark glow */
+}    
+
+.header h2:hover { /* när musen är över rubriken */
+  text-shadow: /* starkare glow */
+    0 0 10px #00eaff,
+    0 0 20px #00eaff,
+    0 0 40px #00eaff,
+    0 0 80px #00eaff;
+}
+
+.header a { /* alla länkar i header */
+  text-decoration: none; /* tar bort streck under text */
+  color: inherit; /* samma färg som header */
+}
+
+/* ===== NAV ===== */
+.nav { /* navigation i header */
+  display: flex; /* gör allt på rad */
+  justify-content: space-between; /* sprider ut knappar */
+  padding: 0 20%; /* luft på sidorna */
+}
+
+/* ===== KNAPPAR ===== */
+.btn { /* knappar */
+  padding: 6px 10px; /* storlek på knapp */
+  font-size: 13px; /* textstorlek */
+  color: #00eaff; /* textfärg */
+  text-decoration: none; /* ingen underline */
+  border: 1px solid #00eaff; /* ram runt knapp */
+  border-radius: 6px; /* rundade hörn */
+}
+
+.btn:hover { /* när man hovrar knapp */
+  text-shadow: 0 0 10px #00eaff; /* glow effekt */
+}
+
+/* ===== MAIN (GRID) ===== */
+main { /* innehållet (kort) */
+  display: grid; /* grid layout */
+  gap: 10px; /* mellanrum mellan kort */
+  padding: 20px; /* luft runt innehåll */
+  border-top: 2px solid #00eaff; /* linje uppe */
+  border-bottom: 2px solid #00eaff; /* linje nere */
+}
+
+@media (min-width: 700px) { /* större skärm */
+  main {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolumner */
+  }
+}
+
+/* ===== CARD ===== */
+.card { /* varje kort */
+  position: relative; /* gör att absolute kan placeras i kortet */
+  background: #0a0a0a; /* mörk bakgrund */
+  border: 1px solid #00eaff; /* ram runt kort */
+  border-radius: 8px; /* rundade hörn */
+  overflow: hidden; /* gömmer det som sticker ut */
+}     
+
+/* ===== BILD ===== */
+.imgbox { /* box runt bild */
+  aspect-ratio: 1/1; /* gör kvadrat */
+  overflow: hidden; /* gömmer overflow */
+}
+
+.imgbox img { /* bilden */
+  width: 100%; /* fyller bredd */
+  height: 100%; /* fyller höjd */
+  object-fit: cover; /* beskär snyggt */
+  transition: transform 0.5s ease; /* mjuk animation */
+  pointer-events: none; /* går ej att klicka bilden */
+}
+
+/* zoom effekt */
+.card:hover img { /* när man hovrar kort */  
+  transform: scale(1.1); /* zoomar in bild */
+}
+
+/* ===== KNAPP PÅ KORT ===== */
+.card-link { /* knapp på kort */
+  position: absolute; /* placeras ovanpå kort */
+  bottom: 10px; /* från botten */
+  left: 10px; /* från vänster */
+  z-index: 2; /* ligger över bild */
+  background: rgba(0,0,0,0.6); /* genomskinlig bakgrund */
+  color: #00eaff; /* textfärg */
+  padding: 5px 8px; /* storlek */
+  border-radius: 4px; /* rundade hörn */
+  text-decoration: none; /* ingen underline */
+  font-size: 14px; /* textstorlek */
+  border: 1px solid #00eaff; /* ram */
+}
+
+.card-link:hover { /* när man hovrar knapp */
+  text-shadow: 0 0 10px #00eaff; /* glow */
+  background: rgba(0,0,0,0.8); /* mörkare bakgrund */
+}
+
+/* ===== FOOTER ===== */
+.footer { /* botten av sidan */
+  text-align: center; /* centrerar text */
+  padding: 20px; /* luft */
+}
+
+.footer a { /* länkar i footer */
+  margin: 0 10px; /* mellanrum mellan länkar */
+  color: #00eaff; /* textfärg */
+  text-decoration: none; /* ingen underline */
+}
+
+.footer a:hover { /* hover på footer-länk */
+  text-shadow: 0 0 10px #00eaff; /* glow effekt */
+}
